@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+
+            <!-- Left Column -->
+            <div class="w3-third">
+
+                <div class="w3-white w3-text-grey w3-card-4" id="w3_box">
+                    <div class="w3-display-container">
+                        <img src="aks.jpg" style="width:100%" alt="Avatar">
+                        <div class="w3-display-bottomleft w3-container w3-text-white">
+                            <h2>Hossein Masihi</h2>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a id="about_link" class="w3-large active"
+                            class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal">
+                            About me
+                        </a>
+                        <a id="contact_link" class="w3-large btn"
+                            class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal">
+                            contact me
+                        </a>
+                    </div>
+                    <hr>
+                    <div id="w3_div" class="w3-container">
+                        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>computer engineer
+                        </p>
+                        <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Theran, IRAN</p>
+                        <p><i
+                                class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>hossein.masihi@mail.com
+                        </p>
+                        <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+989963532487</p>
+                        <hr>
+
+                        <p class="w3-large"><b><i
+                                    class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                        <p>C Programming</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+                        </div>
+                        <p>Coding</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                                <div class="w3-center w3-text-white">80%</div>
+                            </div>
+                        </div>
+                        <p>Network Architecture</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+                        </div>
+                        <p>Data Base</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+                        </div>
+                        <br>
+
+                        <p class="w3-large w3-text-theme"><b><i
+                                    class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                        <p>Persian</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+                        </div>
+                        <p>English</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+                        </div>
+                        <p>Arabic</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div id="Sent_data" style="display: none;">
+                        <p>Data Sent Successfully</p>
+                        <span class="fa fa-times close_box"></span>
+                    </div>
+
+                    <div id="wrapper" class="hide">
+                        <form action="" id="form">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" />
+                            <label for="email">Email</label>
+                            <input type="text" id="email" />
+                            <label for="telephone">Telephone</label>
+                            <input type="text" id="telephone" />
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea><br />
+                            <!-- <input type="submit" value="Send" name="submit" id="submit" /> -->
+                            <input value="Send" name="submit" id="submit"
+                                onclick="document.getElementById('id01').style.display='block'" />
+                        </form>
+                    </div>
+
+                    <div id="id01" class="modal">
+                        <div class="container" style="background-color:#f1f1f1">
+                            <p>Do you confirm the information?</p>
+                            <div class="container_box">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                    class="cancelbtn">No</button>
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                    class="cancelbtn" id="confirm">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+
+                <!-- End Left Column -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="w3-twothird">
+
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+
+                    <h2 class="w3-text-grey w3-padding-16"><i
+                            class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience
+                    </h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>New Programmer/Sharif.edu</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2022 - <span
+                                class="w3-tag w3-teal w3-round">Current</span></h6>
+                        <p>I am a new progerammer at department of computer engineering. Sharif university of
+                            Technology.</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Teaching Assistance</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2022 - <span
+                                class="w3-tag w3-teal w3-round">Current</span>
+                        </h6>
+                        <p>I am a teaching assistance for mathematics I course for new student.</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Web designer</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - Mar 2021
+                        </h6>
+                        <p>I have experience of designing web sites for companies using front end approach.</p><br>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-card w3-white">
+                    <h2 class="w3-text-grey w3-padding-16"><i
+                            class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>First year Bsc student/Computer Engineering</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept 2022- <span
+                                class="w3-tag w3-teal w3-round">Current</span></h6>
+                        <p>Department of Computer Engineering, Sharif University of Technology</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>High school</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2022</h6>
+                        <p>Mathematics/ Physics study at Khajeh Nasir Toosi High school</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Italk Langauge Center</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2020</h6>
+                        <p>Study for Elementary and Intermediate English level,Italk langauage center</p><br>
+                    </div>
+                </div>
+
+                <!-- End Right Column -->
+            </div>
+
+            <!-- End Grid -->
+        </div>
+
+        <!-- End Page Container -->
+    </div>
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-container w3-teal w3-center w3-margin-top">
+        <p>Find me on social media.</p>
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-github w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <!-- End footer -->
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('#contact_link').click(function () {
+                $('#w3_div').slideUp();
+                $('.hide').slideDown();
+                $('#about_link').removeClass('active');
+                $('#contact_link').addClass('active');
+            });
+
+            $('#about_link').click(function () {
+                $('.hide').slideUp();
+                $('#w3_div').slideDown();
+                $('#contact_link').removeClass('active');
+                $('#about_link').addClass('active');
+            });
+
+            $('#submit').click(function () {
+                $('#w3_div').slideUp();
+            });
+
+            $('#confirm').click(function () {
+                $('.hide').slideUp();
+                $('#w3_div').slideUp();
+                $('#Sent_data').slideDown();
+                setTimeout(function () {
+                    $('#w3_div').slideUp();
+                    $('#Sent_data').slideUp();
+                    $('.hide').slideDown();
+                }, 5000);
+            });
+
+            $('.close_box').click(function () {
+                $('#w3_div').slideUp();
+                $('#Sent_data').slideUp();
+                $('.hide').slideDown();
+            });
+        });
+    </script>
+</body>
+
+</html>
